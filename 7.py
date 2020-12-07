@@ -34,8 +34,6 @@ for key in bag_rules:
     count += 1
 print(count)
 
-
-
 # part 2
 def find_num_contains(color):
   if len(bag_rules[color]) == 0:
