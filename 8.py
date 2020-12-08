@@ -24,7 +24,6 @@ print(acc)
 # part 2
 tested = set()
 i = 0
-bad_op = -1
 while i < len(lines):
   i = 0
   acc = 0
@@ -42,11 +41,9 @@ while i < len(lines):
       if op == 'jmp':
         op = 'nop'
         line_changed = True
-        bad_op = i
       elif op == 'nop':
         op = 'jmp'
         line_changed = True
-        bad_op = i
       tested.add(i)
 
     if op == 'acc':
@@ -57,4 +54,3 @@ while i < len(lines):
     i += 1
   
 print(acc)
-print(bad_op)
