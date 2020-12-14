@@ -11,7 +11,7 @@ for line in lines:
   if line[:4] == 'mask':
     mask = line[7:].strip()
   else:
-    mem = int(re.search(r'\[([0-9]+)\]', line).group(1))
+    mem = int(re.search(r'\[([\d]+)\]', line).group(1))
     val = int(re.search(r'= (\d+)', line).group(1))
     val_bin = format(val, '036b')
 
@@ -36,7 +36,7 @@ for line in lines:
   if line[:4] == 'mask':
     mask = line[7:].strip()
   else:
-    mem = int(re.search(r'\[([0-9]+)\]', line).group(1))
+    mem = int(re.search(r'\[([\d]+)\]', line).group(1))
     val = int(re.search(r'= (\d+)', line).group(1))
     mem_bin = format(mem, '036b')
     mem_bin = list(mem_bin)
